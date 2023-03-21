@@ -1,0 +1,85 @@
+.button {
+  background: #118ab2 !important;
+  color: #FFF;
+  text-decoration:none !important;
+  text-shadow:none !important;
+}
+.button {
+  background-color: transparent;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.75em 1em;
+  line-height: 1;
+  text-shadow: 0 0 0.25em rgba(0,0,0,0.5);
+}
+.button-white {
+  background: white;
+  color: orange;
+}
+.button-round {
+  border-radius: 100%;
+  padding: 0.75em;
+  width: 3em;
+  height: 3em;
+}
+.button-ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+}
+.button-ripple_content {
+  position: relative;
+  z-index: 1;
+}
+.button-ripple_ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.button-ripple_ripple{
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  margin: -0.5em 0 0 -0.5em;
+  transform: scale(0);
+
+  top: 0;
+  left: 0;
+
+  -webkit-animation: ripple-animation 2s;
+
+          animation: ripple-animation 2s;
+}
+
+.tr .button-ripple_ripple{ 
+
+  -webkit-animation: ripple-animation 6s;
+
+          animation: ripple-animation 6s;
+}
+
+@-webkit-keyframes ripple-animation {
+    from {
+      transform: scale3d(1,1,1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale3d(100,100,1);
+      opacity: 0;
+    }
+}
+
+@keyframes ripple-animation {
+    from {
+      transform: scale3d(1,1,1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale3d(100,100,1);
+      opacity: 0;
+    }
+}

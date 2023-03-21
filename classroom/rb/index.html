@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Ripple Effect (CSS &amp; Javascript)</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ripple Effect</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="btn-1" href="#">Register</a>
+    <a class="btn-2" href="#">Login</a>
+    <script>
+    const buttons = document.querySelectorAll('a');
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        let x = event.clientX - event.target.offsetLeft;
+        let y = event.clientY - event.target.offsetTop;
+        let rippleElement = document.createElement('span');
+        rippleElement.style.left = x + 'px';
+        rippleElement.style.top = y + 'px';
+        this.appendChild(rippleElement);
+        setTimeout(function () {
+          rippleElement.remove();
+        }, 500);
+      });
+    });
+    </script>
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

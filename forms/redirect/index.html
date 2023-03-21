@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<head>
+<title>Alex Forms redirect</title>
+</head>
+
+<script>
+    setTimeout(function() {
+		if (window.location.hash != "") {
+			location.assign("http://gnets.myds.me/work/forms/raspunde.php?id=" + window.location.hash.replace("#", ""));
+		}
+	}, 1);
+</script>
+
+<body>
+</body>
+</html>
